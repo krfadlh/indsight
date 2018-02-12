@@ -14,5 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::resource('home', 'HomeController');
 Route::resource('category', 'CategoryController');
+Route::resource('subcategory', 'SubCategoryController');
 Route::resource('charts', 'ChartController');

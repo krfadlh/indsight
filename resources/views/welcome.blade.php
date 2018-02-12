@@ -11,6 +11,20 @@
   <script src="{{asset('js/jquery.min.js')}}"></script>
   <script src="{{asset('js/bootstrap.min.js')}}"></script>
   <link rel="icon" type="image/png" href="{{asset('images/favicon.png')}}">
+
+  <style>
+.modal-body .form-horizontal .col-sm-2,
+.modal-body .form-horizontal .col-sm-10 {
+  width: 100%
+}
+
+.modal-body .form-horizontal .control-label {
+  text-align: left;
+}
+.modal-body .form-horizontal .col-sm-offset-2 {
+  margin-left: 15px;
+}
+  </style>
 </head>
 <body id="page-top">
   <header class="masthead">
@@ -53,10 +67,11 @@
         </div>
         <div class="col-lg-2">
           <div class="btn-group">
-            <button type="button" class="btn btn-primary" autofocus="autofocus"><i class="fa fa-facebook"></i></button>
-            <button type="button" class="btn btn-primary"><i class="fa fa-twitter"></i></button>
-            <button type="button" class="btn btn-primary"><i class="fa fa-youtube"></i></button>
-            <button type="button" class="btn btn-primary"><i class="fa fa-instagram"></i></button>
+
+          <button type="button" class="btn btn-primary" autofocus="autofocus"><a href=""><i class="fa fa-facebook"></i></a></button>
+            <button type="button" class="btn btn-primary"><a href=""><i class="fa fa-twitter"></i></a></button>
+            <button type="button" class="btn btn-primary"><a href=""><i class="fa fa-youtube"></i></a></button>
+            <button type="button" class="btn btn-primary"><a href=""><i class="fa fa-instagram"></i></a></button>
           </div>
         </div>
         <div class="col-lg-1"></div>
@@ -66,32 +81,32 @@
         <div class="col-lg-3">
           <div class="feature-item centerBlock">
             <h5>BRAND</h5>
-            <img src="/images/1.png"/>
+            <a href="{{action('CategoryController@index')}}"><img src="/images/1.png"/></a>
           </div>
         </div>
         <div class="col-lg-3">
           <div class="feature-item centerBlock">
             <h5>PUBLIC FIGURE</h5>
-            <img src="/images/2.png"/>
+              <a href="{{action('CategoryController@index')}}"><img src="/images/2.png"/></a>
           </div>
         </div>
         <div class="col-lg-3">
           <div class="feature-item centerBlock">
             <h5>ORGANIZATION</h5>
-            <img src="/images/3.png"/>
+              <a href="{{action('CategoryController@index')}}"><img src="/images/3.png"/></a>
           </div>
         </div>
         <div class="col-lg-3">
           <div class="feature-item centerBlock">
             <h5>MEDIA</h5>
-            <img src="/images/4.png"/>
+              <a href="{{action('CategoryController@index')}}"><img src="/images/4.png"/></a>
           </div>
         </div>
       </div>
 
       <div class="row product1">
         <div class="col-sm-1">
-          <img src="/images/logo.jpg"/>
+            <a href="{{action('CategoryController@index')}}"><img src="/images/logo.jpg"/></a>
         </div>
         <div class="col-sm-2">
           <span class="product-title">Panasonic</span><br>
@@ -279,16 +294,94 @@
   <section class="connect" id-"connect">
     <div class="text-center">
       <span>Can't find your brand here?</span><br><br>
-      <a href="" role="button" class="button">CONNECT YOUR BRAND</a>
+      <a href="" role="button" class="button" data-toggle="modal" data-target="#myModalHorizontal">CONNECT YOUR BRAND</a>
     </div>
-
   </section>
+
+  <!-- Modal -->
+<div class="modal fade" id="myModalHorizontal" tabindex="-1" role="dialog"
+     aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <button type="button" class="close"
+                   data-dismiss="modal">
+                       <span aria-hidden="true">&times;</span>
+                       <span class="sr-only">Close</span>
+                </button>
+            </div>
+
+            <!-- Modal Body -->
+            <div class="modal-body">
+
+                <form class="form-horizontal" role="form">
+                  <div class="form-group">
+                    <label  class="col-sm-2 control-label"
+                              for="inputName3">Name</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control"
+                        id="inputName3" placeholder="Name"/>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label  class="col-sm-2 control-label"
+                              for="inputEmail3">Email</label>
+                    <div class="col-sm-10">
+                        <input type="email" class="form-control"
+                        id="inputEmail3" placeholder="Email"/>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label"
+                          for="inputPhone3" >Phone</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control"
+                            id="inputPhone3" placeholder="Phone"/>
+                    </div>
+                  </div>
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label"
+                            for="inputCompany3" >Company</label>
+                      <div class="col-sm-10">
+                          <input type="text" class="form-control"
+                              id="inputCompany3" placeholder="Company"/>
+                      </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label"
+                          for="inputCategory" >Category</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control"
+                            id="inputCategory3" placeholder="Category"/>
+                    </div>
+                  </div>
+                    <div class="form-group">
+                      <label class="col-sm-4 control-label"
+                            for="inputSubcat3" >Sub Category</label>
+                      <div class="col-sm-10">
+                          <input type="text" class="form-control"
+                              id="inputSubcat3" placeholder="Sub Category"/>
+                      </div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">
+                    Submit
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
 
   <section class="contact" id="contact">
     <div class="row">
     <div class="col-sm-4 text-center">
       <span>Contact us :</span><br><br>
-      <span class="bold">customen@nolimit.id</span>
+      <span class="bold">customer@nolimit.id</span>
     </div>
     <div class="col-sm-4 text-center">
       <div class="container">
@@ -318,8 +411,8 @@
       </div>
     </div>
     <div class="col-sm-4 text-center">
-      <span>Our websites ::</span><br><br>
-      <span class="bold">www.nolimit.id</span>
+      <span>Our websites:</span><br><br>
+      <a href="https://www.nolimit.id/" target="_blank"><span class="bold">www.nolimit.id</span></a>
     </div>
   </div>
   </section>
@@ -329,6 +422,32 @@
       <p>Copyright &copy; 2017 indsight. All screenshoots &copy; their respective owners</p>
     </div>
   </footer>
-  <!-- <script src="{{asset('js/app.js')}}" ></script> -->
+  <script>
+  // Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+      modal.style.display = "none";
+  }
+}
+</script>
 </body>
 </html>

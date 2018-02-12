@@ -7,11 +7,9 @@
   <title>indsight</title>
   <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet" type="text/css">
   <link href="{{asset('css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
-  <link href="{{asset('css/category.css')}}" rel="stylesheet" type="text/css">
-  <link href="{{asset('css/carousel.css')}}" rel="stylesheet" type="text/css">
+  <link href="{{asset('css/subcategory.css')}}" rel="stylesheet" type="text/css">
   <script src="{{asset('js/jquery.min.js')}}"></script>
   <script src="{{asset('js/bootstrap.min.js')}}"></script>
-  <script src="{{asset('js/carousel.js')}}"></script>
   <link rel="icon" type="image/png" href="{{asset('images/favicon.png')}}">
   <style>
   .modal-body .form-horizontal .col-sm-2,
@@ -42,12 +40,12 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-3 branch">
-            <a href="{{action('HomeController@index')}}" role="button" class="button">Back to Home</a>
+            <a href="{{action('CategoryController@index')}}" role="button" class="button">Back to Brand</a>
         </div>
         <div class="col-lg-6 text-center cat">
           <div class="feature-item centerBlock">
-            <h5>BRAND</h5>
-            <a href="{{action('SubCategoryController@index')}}"><img src="/images/brand.png"/></a>
+            <img src="/images/sub-category.png"/>
+            <h5>AIR ASIA</h5>
         </div>
         </div>
         <div class="col-lg-2 social">
@@ -63,148 +61,25 @@
     </div>
 
     <div class="row">
-		      <div class="MultiCarousel" data-items="1,3,5,6" data-slide="1" id="MultiCarousel"  data-interval="1000">
-            <div class="MultiCarousel-inner">
-                <div class="item">
-                    <div class="pad15">
-                      <img class="carousel" src="/images/produk1.png"/>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="pad15">
-                      <img class="carousel" src="/images/produk1.png"/>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="pad15">
-                        <img class="carousel" src="/images/produk1.png"/>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="pad15">
-                      <img class="carousel" src="/images/produk1.png"/>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="pad15">
-                        <img class="carousel" src="/images/produk1.png"/>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="pad15">
-                      <img class="carousel" src="/images/produk1.png"/>
 
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="pad15">
-                        <img class="carousel" src="/images/produk1.png"/>
-
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="pad15">
-                      <img class="carousel" src="/images/produk1.png"/>
-
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="pad15">
-                        <img class="carousel" src="/images/produk1.png"/>
-
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="pad15">
-                        <img class="carousel" src="/images/produk1.png"/>
-
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="pad15">
-                      <img class="carousel" src="/images/produk1.png"/>
-
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="pad15">
-                      <img class="carousel" src="/images/produk1.png"/>
-
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="pad15">
-                      <img class="carousel" src="/images/produk1.png"/>
-
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="pad15">
-                      <img class="carousel" src="/images/produk1.png"/>
-
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="pad15">
-                      <img class="carousel" src="/images/produk1.png"/>
-
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="pad15">
-                      <img class="carousel" src="/images/produk1.png"/>
-
-                    </div>
-                </div>
-            </div>
-            <button class="btn btn-primary leftLst"><</button>
-            <button class="btn btn-primary rightLst">></button>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="sub-category" id="sub-category">
-   <div class="container">
-     <div class="row">
-     <div class="col-lg-12 text-center cat">
-       <div class="feature-item centerBlock">
-         <h5>TOP 5 AIRLINES</h5>
+      <div class="box1 effect3">
+        <h4>FOLLOWER GROWTH</h4>
        </div>
-     </div>
 
-     <div class="flex-container">
-       <div>1</div>
-       <div>2</div>
-       <div>3</div>
-       <div>4</div>
-       <div>5</div>
-     </div>
-
-   </div>
-   </div>
- </section>
-
- <section class="chart" id="chart">
-   <div class="container">
-     <div class="row">
        <div class="box1 effect3">
-         <h4>FOLLOWER GROWTH</h4>
+         <h4>ENGAGEMENT RATE</h4>
         </div>
 
-        <div class="box1 effect3">
-          <h4>ENGAGEMENT RATE</h4>
-         </div>
+      <div class="box effect2">
+        <h4>5 TOP PEOPLE</h4>
+       </div>
 
        <div class="box effect2">
-         <h3>5 TOP PEOPLE</h3>
+         <h4>WORDCLOUD</h4>
         </div>
+    </div>
+  </section>
 
-        <div class="box effect2">
-          <h3>WORDCLOUD</h3>
-         </div>
-     </div>
-   </div>
- </section>
 
   <section class="offer" id="offer">
     <div class="container text-center">
