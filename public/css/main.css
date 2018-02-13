@@ -290,7 +290,7 @@ section.connect{
   background-position: right;
 }
 section.connect span{
-  font-size: 32pt;
+  font-size: 24pt;
 }
 section.connect a.button{
   background-color: #EB0090;
@@ -300,7 +300,7 @@ section.connect a.button{
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 25px;
+  font-size: 20px;
   width: auto;
   padding: 10px;
   cursor: pointer;

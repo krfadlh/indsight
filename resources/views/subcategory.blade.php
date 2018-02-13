@@ -12,17 +12,74 @@
   <script src="{{asset('js/bootstrap.min.js')}}"></script>
   <link rel="icon" type="image/png" href="{{asset('images/favicon.png')}}">
   <style>
-  .modal-body .form-horizontal .col-sm-2,
-  .modal-body .form-horizontal .col-sm-10 {
-    width: 100%
-  }
-
-  .modal-body .form-horizontal .control-label {
-    text-align: left;
-  }
-  .modal-body .form-horizontal .col-sm-offset-2 {
+.modal-body .form-horizontal .control-label {
+  text-align: left;
+}
+.modal-body .form-horizontal .col-sm-offset-2 {
   margin-left: 15px;
-  }
+}
+.modal-footer .btn{
+  background-color: #004B9E;
+}
+input[type=text], select, textarea{
+    width: 100%;
+    padding: 0 12px 5px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+    height: 30px;
+}
+
+label {
+    padding: 0 12px 5px 0;
+    display: inline-block;
+    font-size: 15px;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.col-30 {
+    float: left;
+    width: 30%;
+    margin-top: 6px;
+    padding-left: 10px;
+}
+
+.col-70 {
+    float: left;
+    width: 70%;
+    margin-top: 6px;
+    padding-right: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media (max-width: 700px) {
+    .col-30, .col-70, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
   </style>
 </head>
 <body id="page-top">
@@ -40,7 +97,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-3 branch">
-            <a href="{{action('CategoryController@index')}}" role="button" class="button">Back to Brand</a>
+            <a href="{{action('CategoryController@index')}}" role="button" class="button">&#8249;Back to Brand</a>
         </div>
         <div class="col-lg-6 text-center cat">
           <div class="feature-item centerBlock">
@@ -112,57 +169,61 @@
 
             <!-- Modal Body -->
             <div class="modal-body">
+              <form action="">
+              <div class="row">
+                <div class="col-30">
+                  <label for="name">Name</label>
+                </div>
+                <div class="col-70">
+                  <input type="text" id="name" name="Name" placeholder="Your name..">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-30">
+                  <label for="email">Email</label>
+                </div>
+                <div class="col-70">
+                  <input type="text" id="email" name="email" placeholder="Your email..">
+                </div>
+              </div><br>
 
-                <form class="form-horizontal" role="form">
-                  <div class="form-group">
-                    <label  class="col-sm-2 control-label"
-                              for="inputName3">Name</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control"
-                        id="inputName3" placeholder="Name"/>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label  class="col-sm-2 control-label"
-                              for="inputEmail3">Email</label>
-                    <div class="col-sm-10">
-                        <input type="email" class="form-control"
-                        id="inputEmail3" placeholder="Email"/>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label"
-                          for="inputPhone3" >Phone</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control"
-                            id="inputPhone3" placeholder="Phone"/>
-                    </div>
-                  </div>
-                    <div class="form-group">
-                      <label class="col-sm-2 control-label"
-                            for="inputCompany3" >Company</label>
-                      <div class="col-sm-10">
-                          <input type="text" class="form-control"
-                              id="inputCompany3" placeholder="Company"/>
-                      </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label"
-                          for="inputCategory" >Category</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control"
-                            id="inputCategory3" placeholder="Category"/>
-                    </div>
-                  </div>
-                    <div class="form-group">
-                      <label class="col-sm-4 control-label"
-                            for="inputSubcat3" >Sub Category</label>
-                      <div class="col-sm-10">
-                          <input type="text" class="form-control"
-                              id="inputSubcat3" placeholder="Sub Category"/>
-                      </div>
-                    </div>
-                </form>
+              <div class="row">
+                <div class="col-30">
+                  <label for="company">Company Name</label>
+                </div>
+                <div class="col-70">
+                  <input type="text" id="company" name="company" placeholder="Your company name..">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-30">
+                  <label for="category">Category</label>
+                </div>
+                <div class="col-70">
+                  <select id="category" name="category">
+                    <option value="brand">Brand</option>
+                    <option value="publicfigure">Public Figure</option>
+                    <option value="organization">Oragnization</option>
+                    <option value="media">Media</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-30">
+                  <label for="subcategory">Sub category</label>
+                </div>
+                <div class="col-70">
+                  <select id="subcategory" name="subcategory">
+                    <option value="brand">Brand</option>
+                    <option value="publicfigure">Public Figure</option>
+                    <option value="organization">Oragnization</option>
+                    <option value="media">Media</option>
+                  </select>
+                </div>
+              </div>
+
+            </form>
             </div>
 
             <!-- Modal Footer -->

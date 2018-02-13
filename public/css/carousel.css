@@ -1,7 +1,7 @@
 .MultiCarousel {
   float: left;
   overflow: hidden;
-  padding: 30px;
+  padding: 20px;
   width: 100%;
  position:relative;
 }
