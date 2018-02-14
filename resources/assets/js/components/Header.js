@@ -1,20 +1,19 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import { Link } from 'react-router-dom';
 
 class Header extends Component {
     render() {
         return (
-          <div className="container text-center">
-            <div className="intro">
-              <span className="title1">UNCOVER</span><br />
-              <span className="title2">YOUR BRANDS</span><br />
-              <span className="title3">SECRETS</span><br />
-              <div className="desc">
-                <span>Using Indsight, you can analyze many secrets about your brands within seconds.</span><br />
-                <span>Thousands of data that you never know before will help your brand growth</span>
-              </div>
+          <header className="masthead">
+            <div className="logo-app text-center">
+              <form id="demo-2">
+                <input className="float-right" type="search" placeholder="Search"/>
+              </form>
+              <img className="logo-app" src="/images/logo-insight.png"/>
+              <img className="logo-company float-left" src="/images/logo-company.png"/>
             </div>
-          </div>
+          </header>
         );
     }
 }
