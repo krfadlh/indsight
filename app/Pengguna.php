@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Chart extends Model
+class Pengguna extends Model
 {
-    
+    protected $table = "pengguna";
 }

@@ -1,11 +1,25 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom';
+import Header from './Header';
+import SubCategoryDetails from './SubCategoryDetails';
+import Contact from './Contact';
+import Footer from './Footer';
 
 class SubCategory extends Component {
     render() {
         return (
           <div>
+          <Header/>
+          <section className="features" id="features">
+            <div className="container">
+            <FilterSubCategory/>
+            <SubCategoryDetails/>
+            </div>
+          </section>
+          <ConnectBrand/>
+          <Contact/>
+          <Footer/>
           </div>
         );
     }
@@ -15,7 +29,7 @@ function FilterSubCategory(){
     <div className="container">
     <div className="row">
       <div className="col-lg-3 branch">
-          <a href="{{action('CategoryController@index')}}" role="button" className="button">&#8249;Back to Brand</a>
+          <Link to="category"><a role="button" className="button">&#8249;Back to Brand</a></Link>
       </div>
       <div className="col-lg-6 text-center cat">
         <div className="feature-item centerBlock">

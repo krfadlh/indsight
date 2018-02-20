@@ -260,6 +260,7 @@ input[type=submit]:hover {
      <div class="row">
        <div class="box1 effect3">
            <h4>FOLLOWER GROWTH</h4>
+
         </div>
 
         <div class="box1 effect3">
@@ -424,6 +425,7 @@ input[type=submit]:hover {
   </footer>
   <!-- <script src="{{asset('js/app.js')}}" ></script> -->
   <script>
+
   // Get the modal
 var modal = document.getElementById('myModal');
 

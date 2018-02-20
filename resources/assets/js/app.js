@@ -1,7 +1,7 @@
 require('./bootstrap');
 import React from 'react';
 import { render } from 'react-dom';
-import { Router, Route, browserHistory } from 'react-router';
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Main from './components/Main';
 import Category from './components/Category';
 import ShowBrandCarousel from './components/ShowBrandCarousel';
@@ -12,4 +12,14 @@ import SubCategoryDetails from './components/SubCategoryDetails';
 import Header from './components/Header';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-render(<Main/>, document.getElementById('header'));
+render(
+    <Router>
+    <div>
+    <Main/>
+    <Route path="/category" component={Category}/>
+    <Route path="/category-details" component={CategoryDetails}/>
+    <Route path="/top-five" component={TopFiveCategory}/>
+    <Route path="/sub-category" component={SubCategory}/>
+    </div>
+    </Router>
+  , document.getElementById('header'));

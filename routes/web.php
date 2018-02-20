@@ -12,9 +12,10 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 Route::resource('home', 'HomeController');
 Route::resource('category', 'CategoryController');
 Route::resource('subcategory', 'SubCategoryController');
 Route::resource('charts', 'ChartController');
+Route::resource('bar', 'HighChartController@index');

@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom';
+import Contact from './Contact';
+import Footer from './Footer';
 
 class Main extends Component {
     render() {
@@ -11,9 +13,12 @@ class Main extends Component {
           <div className="container">
           <Filter/>
           <CategoryProduct/>
+          <TopProduct/>
           </div>
           </section>
           <ConnectBrand/>
+          <Contact/>
+          <Footer/>
           </div>
         );
     }
@@ -78,27 +83,217 @@ function CategoryProduct(){
       <div className="col-lg-3">
         <div className="feature-item centerBlock">
           <h5>BRAND</h5>
-          <a href="{{action('CategoryController@index')}}"><img src="/images/1.png"/></a>
+          <Link to="/category"><img src="/images/1.png"/></Link>
         </div>
       </div>
       <div className="col-lg-3">
         <div className="feature-item centerBlock">
           <h5>PUBLIC FIGURE</h5>
-            <a href="{{action('CategoryController@index')}}"><img src="/images/2.png"/></a>
+              <Link to="/category"><img src="/images/2.png"/></Link>
         </div>
       </div>
       <div className="col-lg-3">
         <div className="feature-item centerBlock">
           <h5>ORGANIZATION</h5>
-            <a href="{{action('CategoryController@index')}}"><img src="/images/3.png"/></a>
+            <Link to="/category"><img src="/images/3.png"/></Link>
         </div>
       </div>
       <div className="col-lg-3">
         <div className="feature-item centerBlock">
           <h5>MEDIA</h5>
-            <a href="{{action('CategoryController@index')}}"><img src="/images/4.png"/></a>
+              <Link to="/category"><img src="/images/4.png"/></Link>
         </div>
       </div>
+    </div>
+  );
+}
+function TopProduct(){
+  return(
+    <div>
+    <div className="row product1">
+      <div className="col-sm-1">
+          <Link to="category"><img src="/images/logo.jpg"/></Link>
+      </div>
+      <div className="col-sm-2">
+        <span className="product-title">Panasonic</span><br/>
+        <span className="product-growth">17.81</span>
+        <span className="product-amount">11.2</span>
+      </div>
+      <div className="col-sm-1">
+        <img src="/images/logo.jpg"/>
+      </div>
+      <div className="col-sm-2">
+        <span className="product-title">Panasonic</span><br/>
+        <span className="product-growth">17.81</span>
+        <span className="product-amount">11.2</span>
+      </div><div className="col-sm-1">
+        <img src="/images/logo.jpg"/>
+      </div>
+      <div className="col-sm-2">
+        <span className="product-title">Panasonic</span><br/>
+        <span className="product-growth">17.81</span>
+        <span className="product-amount">11.2</span>
+      </div><div className="col-sm-1">
+        <img src="/images/logo.jpg"/>
+      </div>
+      <div className="col-sm-2">
+        <span className="product-title">Panasonic</span><br/>
+        <span className="product-growth">17.81</span>
+        <span className="product-amount">11.2</span>
+      </div>
+    </div>
+
+    <div className="row product">
+      <div className="col-sm-1">
+        <img src="/images/logo.jpg"/>
+      </div>
+      <div className="col-sm-2">
+        <span className="product-title">Panasonic</span><br/>
+        <span className="product-growth">17.81</span>
+        <span className="product-amount">11.2</span>
+      </div>
+      <div className="col-sm-1">
+        <img src="/images/logo.jpg"/>
+      </div>
+      <div className="col-sm-2">
+        <span className="product-title">Panasonic</span><br/>
+        <span className="product-growth">17.81</span>
+        <span className="product-amount">11.2</span>
+      </div>
+      <div className="col-sm-1">
+        <img src="/images/logo.jpg"/>
+      </div>
+      <div className="col-sm-2">
+        <span className="product-title">Panasonic</span><br/>
+        <span className="product-growth">17.81</span>
+        <span className="product-amount">11.2</span>
+      </div>
+      <div className="col-sm-1">
+        <img src="/images/logo.jpg"/>
+      </div>
+      <div className="col-sm-2">
+        <span className="product-title">Panasonic</span><br/>
+        <span className="product-growth">17.81</span>
+        <span className="product-amount">11.2</span>
+      </div>
+    </div>
+
+
+    <div className="row product">
+      <div className="col-sm-1">
+        <img src="/images/logo.jpg"/>
+      </div>
+      <div className="col-sm-2">
+        <span className="product-title">Panasonic</span><br/>
+        <span className="product-growth">17.81</span>
+        <span className="product-amount">11.2</span>
+      </div>
+      <div className="col-sm-1">
+        <img src="/images/logo.jpg"/>
+      </div>
+      <div className="col-sm-2">
+        <span className="product-title">Panasonic</span><br/>
+        <span className="product-growth">17.81</span>
+        <span className="product-amount">11.2</span>
+      </div><div className="col-sm-1">
+        <img src="/images/logo.jpg"/>
+      </div>
+      <div className="col-sm-2">
+        <span className="product-title">Panasonic</span><br/>
+        <span className="product-growth">17.81</span>
+        <span className="product-amount">11.2</span>
+      </div><div className="col-sm-1">
+        <img src="/images/logo.jpg"/>
+      </div>
+      <div className="col-sm-2">
+        <span className="product-title">Panasonic</span><br/>
+        <span className="product-growth">17.81</span>
+        <span className="product-amount">11.2</span>
+      </div>
+    </div>
+
+
+    <div className="row product">
+      <div className="col-sm-1">
+        <img src="/images/logo.jpg"/>
+      </div>
+      <div className="col-sm-2">
+        <span className="product-title">Panasonic</span><br/>
+        <span className="product-growth">17.81</span>
+        <span className="product-amount">11.2</span>
+      </div>
+      <div className="col-sm-1">
+        <img src="/images/logo.jpg"/>
+      </div>
+      <div className="col-sm-2">
+        <span className="product-title">Panasonic</span><br/>
+        <span className="product-growth">17.81</span>
+        <span className="product-amount">11.2</span>
+      </div><div className="col-sm-1">
+        <img src="/images/logo.jpg"/>
+      </div>
+      <div className="col-sm-2">
+        <span className="product-title">Panasonic</span><br/>
+        <span className="product-growth">17.81</span>
+        <span className="product-amount">11.2</span>
+      </div><div className="col-sm-1">
+        <img src="/images/logo.jpg"/>
+      </div>
+      <div className="col-sm-2">
+        <span className="product-title">Panasonic</span><br/>
+        <span className="product-growth">17.81</span>
+        <span className="product-amount">11.2</span>
+      </div>
+    </div>
+
+
+    <div className="row product">
+      <div className="col-sm-1">
+        <img src="/images/logo.jpg"/>
+      </div>
+      <div className="col-sm-2">
+        <span className="product-title">Panasonic</span><br/>
+        <span className="product-growth">17.81</span>
+        <span className="product-amount">11.2</span>
+      </div>
+      <div className="col-sm-1">
+        <img src="/images/logo.jpg"/>
+      </div>
+      <div className="col-sm-2">
+        <span className="product-title">Panasonic</span><br/>
+        <span className="product-growth">17.81</span>
+        <span className="product-amount">11.2</span>
+      </div><div className="col-sm-1">
+        <img src="/images/logo.jpg"/>
+      </div>
+      <div className="col-sm-2">
+        <span className="product-title">Panasonic</span><br/>
+        <span className="product-growth">17.81</span>
+        <span className="product-amount">11.2</span>
+      </div><div className="col-sm-1">
+        <img src="/images/logo.jpg"/>
+      </div>
+      <div className="col-sm-2">
+        <span className="product-title">Panasonic</span><br/>
+        <span className="product-growth">17.81</span>
+        <span className="product-amount">11.2</span>
+      </div>
+    </div>
+
+    <div className="row detail">
+      <div className="col-sm-3 text-center">
+      <Link to="category"><a role="button" className="button">see more</a></Link>
+      </div>
+      <div className="col-sm-3 text-center">
+        <Link to="category"><a role="button" className="button">see more</a></Link>
+      </div>
+      <div className="col-sm-3 text-center">
+        <Link to="category"><a role="button" className="button">see more</a></Link>
+      </div>
+      <div className="col-sm-3 text-center">
+      <Link to="category"><a role="button" className="button">see more</a></Link>
+      </div>
+    </div>
     </div>
   );
 }

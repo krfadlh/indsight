@@ -1,25 +1,43 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom';
+import Header from './Header';
+import ShowBrandCarousel from './ShowBrandCarousel';
+import TopFiveCategory from './TopFiveCategory';
+import CategoryDetails from './CategoryDetails';
+import Contact from './Contact';
+import Footer from './Footer';
 
 class Category extends Component {
     render() {
         return (
           <div>
+          <Header/>
+          <section className="features" id="features">
+            <div className="container">
+            <FilterCategory/>
+            <ShowBrandCarousel/>
+            </div>
+          </section>
+          <TopFiveCategory/>
+          <CategoryDetails/>
+          <ConnectBrand/>
+          <Contact/>
+          <Footer/>
           </div>
         );
     }
 }
 function FilterCategory(){
-  retun(
+  return(
       <div className="row">
         <div className="col-lg-3 branch">
-            <a href="{{action('HomeController@index')}}" role="button" className="button">&#8249;Back to Home</a>
+              <Link to="main"><a role="button" className="button">&#8249;Back to Home</a></Link>
         </div>
         <div className="col-lg-6 text-center cat">
           <div className="feature-item centerBlock">
             <h5>BRAND</h5>
-            <a href="{{action('SubCategoryController@index')}}"><img src="/images/brand.png"/></a>
+              <img src="/images/brand.png"/>
         </div>
         </div>
         <div className="col-lg-2 social">
