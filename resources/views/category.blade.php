@@ -85,17 +85,17 @@ input[type=submit]:hover {
   </style>
 </head>
 <body id="page-top">
-  <header class="masthead">
+  <header class="masthead2">
     <div class="logo-app text-center">
       <form id="demo-2">
         <input class="float-right" type="search" placeholder="Search">
       </form>
-      <img class="logo-app" src="/images/logo-insight.png"/>
-      <img class="logo-company float-left" src="/images/logo-company.png"/>
+      <img class="logo-app2" src="/images/logo-insight.png"/>
+      <img class="logo-company2 float-left" src="/images/logo-company.png"/>
     </div>
   </header>
 
-  <section class="features" id="features">
+  <section class="features2" id="features">
     <div class="container">
       <div class="row">
         <div class="col-lg-3 branch">
@@ -278,7 +278,7 @@ input[type=submit]:hover {
    </div>
  </section>
 
-  <section class="offer" id="offer">
+  <section class="offer2" id="offer">
     <div class="container text-center">
       <span>Want to analyze more secrets about your brands?</span><br><br>
       <img src="/images/message.png" height="40px" width="70px"/><br><br>

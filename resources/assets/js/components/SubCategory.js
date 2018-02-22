@@ -11,7 +11,7 @@ class SubCategory extends Component {
         return (
           <div>
           <Header/>
-          <section className="features" id="features">
+          <section className="features3" id="features">
             <div className="container">
             <FilterSubCategory/>
             <SubCategoryDetails/>
@@ -52,7 +52,7 @@ function FilterSubCategory(){
 }
 function ConnectBrand(){
   return(
-    <section className="offer" id="offer">
+    <section className="offer3" id="offer">
       <div className="container text-center">
         <span>Want to analyze more secrets about your brands?</span><br/><br/>
         <img src="/images/message.png" height="40px" width="70px"/><br/><br/>

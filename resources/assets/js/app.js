@@ -9,6 +9,7 @@ import TopFiveCategory from './components/TopFiveCategory';
 import CategoryDetails from './components/CategoryDetails';
 import SubCategory from './components/SubCategory';
 import SubCategoryDetails from './components/SubCategoryDetails';
+import Modal from './components/Modal';
 import Header from './components/Header';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -16,10 +17,12 @@ render(
     <Router>
     <div>
     <Main/>
-    <Route path="/category" component={Category}/>
+    <switch>
+    <Route exact path="/category" component={Category}/>
     <Route path="/category-details" component={CategoryDetails}/>
     <Route path="/top-five" component={TopFiveCategory}/>
     <Route path="/sub-category" component={SubCategory}/>
+    </switch>
     </div>
     </Router>
   , document.getElementById('header'));

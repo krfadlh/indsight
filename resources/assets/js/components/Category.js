@@ -13,7 +13,7 @@ class Category extends Component {
         return (
           <div>
           <Header/>
-          <section className="features" id="features">
+          <section className="features2" id="features">
             <div className="container">
             <FilterCategory/>
             <ShowBrandCarousel/>
@@ -36,8 +36,10 @@ function FilterCategory(){
         </div>
         <div className="col-lg-6 text-center cat">
           <div className="feature-item centerBlock">
-            <h5>BRAND</h5>
+              <div className="logo">
+              <h5>BRAND</h5>
               <img src="/images/brand.png"/>
+              </div>
         </div>
         </div>
         <div className="col-lg-2 social">
@@ -54,7 +56,7 @@ function FilterCategory(){
 }
 function ConnectBrand(){
   return(
-    <section className="offer" id="offer">
+    <section className="offer2" id="offer">
       <div className="container text-center">
         <span>Want to analyze more secrets about your brands</span><br/><br/>
         <img src="/images/message.png" height="40px" width="70px"/><br/><br/>

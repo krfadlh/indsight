@@ -3,12 +3,15 @@ import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom';
 import Contact from './Contact';
 import Footer from './Footer';
+import Modal from './Modal';
 
 class Main extends Component {
     render() {
         return (
           <div>
+          <header className="masthead">
           <Header/>
+          </header>
           <section className="features" id="features">
           <div className="container">
           <Filter/>
@@ -16,7 +19,7 @@ class Main extends Component {
           <TopProduct/>
           </div>
           </section>
-          <ConnectBrand/>
+          <Modal/>
           <Contact/>
           <Footer/>
           </div>
@@ -25,7 +28,6 @@ class Main extends Component {
 }
 function Header(){
   return(
-    <header className="masthead">
       <div className="logo-app text-center">
         <form id="demo-2">
           <input className="float-right" type="search" placeholder="Search"/>
@@ -33,7 +35,6 @@ function Header(){
         <img className="logo-app" src="/images/logo-insight.png"/>
         <img className="logo-company float-left" src="/images/logo-company.png"/>
       </div>
-      </header>
   );
 }
 function Filter(){
