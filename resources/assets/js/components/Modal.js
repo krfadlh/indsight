@@ -1,89 +1,97 @@
-import React from "react";
-import Warper from "./Warper";
-import modal from "./modal.css";
-import Popup from "reactjs-popup";
-//
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 
-const contentStyle = {
-  maxWidth: "600px",
-  width: "90%",
-  height: "200px"
-};
-
-const CustomModal = () => (
-  <Popup
-    trigger={
+class Modal extends React.Component{
+    render(){
+      return(
+        <div>
+          <Modalbox/>
+        </div>
+      );
+    }
+}
+function Modalbox(){
+  return(
+    <div>
     <section className="connect" id="connect">
       <div className="text-center">
         <span>Cant find your brand here</span><br/><br/>
-        <a href="" role="button" className="button" data-toggle="modal" data-target="#myModalHorizontal">CONNECT YOUR BRAND</a>
+        <a href="" role="button" className="button" data-toggle="modal" data-target="#myModal">CONNECT YOUR BRAND</a>
       </div>
     </section>
-  }
-    modal
-    contentStyle={contentStyle}
-  >
-    {close => (
-      <div className="modal">
-        <a className="close" onClick={close}>
-          &times;
-        </a>
-        <div className="header"> Modal Title </div>
-        <div className="content">
-          {" "}
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, a
-          nostrum. Dolorem, repellat quidem ut, minima sint vel eveniet
-          quibusdam voluptates delectus doloremque, explicabo tempore dicta
-          adipisci fugit amet dignissimos?
-          <br />
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur
-          sit commodi beatae optio voluptatum sed eius cumque, delectus saepe
-          repudiandae explicabo nemo nam libero ad, doloribus, voluptas rem
-          alias. Vitae?
+
+    <div className="modal fade" id="myModal" role="dialog">
+    <div className="modal-dialog modal-lg">
+      <div className="modal-content">
+        <div className="modal-header">
+          <button type="button" className="close" data-dismiss="modal">&times;</button>
         </div>
-        <div className="actions">
-          <Popup
-            trigger={<button className="button"> Menu Demo </button>}
-            position="top center"
-            closeOnDocumentClick
-            contentStyle={{ padding: "0px", border: "none" }}
-          >
-            <div className="menu">
-              <div className="menu-item"> Menu item 1</div>
-              <div className="menu-item"> Menu item 2</div>
-              <div className="menu-item"> Menu item 3</div>
-              <Popup
-                trigger={<div className="menu-item"> sup Menu </div>}
-                position="right top"
-                on="hover"
-                closeOnDocumentClick
-                mouseLeaveDelay={300}
-                mouseEnterDelay={0}
-                contentStyle={{ padding: "0px", border: "none" }}
-                arrow={false}
-              >
-                <div className="menu">
-                  <div className="menu-item"> item 1</div>
-                  <div className="menu-item"> item 2</div>
-                  <div className="menu-item"> item 3</div>
-                </div>
-              </Popup>
-              <div className="menu-item"> Menu item 4</div>
-            </div>
-          </Popup>
-          <button
-            className="button"
-            onClick={() => {
-              console.log("modal closed ");
-              close();
-            }}
-          >
-            close modal
-          </button>
+
+        <div className="modal-body">
+        <form action="">
+        <div className="row">
+          <div className="col-30">
+            <label for="name">Name</label>
+          </div>
+          <div className="col-70">
+            <input type="text" id="name" name="Name" placeholder="Your name.."/>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-30">
+            <label for="email">Email</label>
+          </div>
+          <div className="col-70">
+            <input type="text" id="email" name="email" placeholder="Your email.."/>
+          </div>
+        </div><br/>
+
+        <div className="row">
+          <div className="col-30">
+            <label for="company">Company Name</label>
+          </div>
+          <div className="col-70">
+            <input type="text" id="company" name="company" placeholder="Your company name.."/>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-30">
+            <label for="category">Category</label>
+          </div>
+          <div className="col-70">
+            <select id="category" name="category">
+              <option value="brand">Brand</option>
+              <option value="publicfigure">Public Figure</option>
+              <option value="organization">Oragnization</option>
+              <option value="media">Media</option>
+            </select>
+          </div>
+        </div>
+
+        <div className="row">
+          <div className="col-30">
+            <label for="subcategory">Sub category</label>
+          </div>
+          <div className="col-70">
+            <select id="subcategory" name="subcategory">
+              <option value="brand">Brand</option>
+              <option value="publicfigure">Public Figure</option>
+              <option value="organization">Oragnization</option>
+              <option value="media">Media</option>
+            </select>
+          </div>
+        </div>
+
+      </form>
+        </div>
+
+        <div className="modal-footer">
+          <button type="button" className="btn btn-default" data-dismiss="modal">Close</button>
         </div>
       </div>
-    )}
-  </Popup>
+    </div>
+  </div>
+</div>
 );
-
-export default CustomModal;
+}
+export default Modal;
