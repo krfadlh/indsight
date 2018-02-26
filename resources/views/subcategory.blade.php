@@ -10,6 +10,7 @@
   <link href="{{asset('css/subcategory.css')}}" rel="stylesheet" type="text/css">
   <script src="{{asset('js/jquery.min.js')}}"></script>
   <script src="{{asset('js/bootstrap.min.js')}}"></script>
+  <script src = "https://code.highcharts.com/highcharts.js"></script>
   <link rel="icon" type="image/png" href="{{asset('images/favicon.png')}}">
   <style>
 .modal-body .form-horizontal .control-label {
@@ -83,17 +84,17 @@ input[type=submit]:hover {
   </style>
 </head>
 <body id="page-top">
-  <header class="masthead2">
+  <header class="masthead">
     <div class="logo-app text-center">
       <form id="demo-2">
         <input class="float-right" type="search" placeholder="Search">
       </form>
-      <img class="logo-app2" src="/images/logo-insight.png"/>
-      <img class="logo-company2 float-left" src="/images/logo-company.png"/>
+      <img class="logo-app" src="/images/logo-insight.png"/>
+      <img class="logo-company float-left" src="/images/logo-company.png"/>
     </div>
   </header>
 
-  <section class="features3" id="features">
+  <section class="features" id="features">
     <div class="container">
       <div class="row">
         <div class="col-lg-3 branch">
@@ -118,27 +119,179 @@ input[type=submit]:hover {
     </div>
 
     <div class="row">
-
       <div class="box1 effect3">
-        <h4>FOLLOWER GROWTH</h4>
-       </div>
+            <div id = "follower" style = "width: 100%; height: 300px;">
+            <script>
+            $(document).ready(function() {
+               var chart = {
+                  type: 'line'
+               };
+               var title = {
+                  text: 'FOLLOWER GROWTH'
+               };
+               var subtitle = {
+                  text: ''
+               };
+               var xAxis = {
+                  categories: ['Januari', 'Febaruari', 'Maret', 'Maret', 'April'],
+                  title: {
+                     text: null
+                  }
+               };
+               var yAxis = {
+                  min: 0,
+                  title: {
+                     text: '',
+                     align: 'high'
+                  },
+                  labels: {
+                     overflow: 'justify'
+                  }
+               };
+               var tooltip = {
+                  valueSuffix: ' millions'
+               };
+               var plotOptions = {
+                  bar: {
+                     dataLabels: {
+                        enabled: true
+                     }
+                  }
+               };
+               var legend = {
+                  layout: 'vertical',
+                  align: 'right',
+                  verticalAlign: 'top',
+                  x: -40,
+                  y: 100,
+                  floating: true,
+                  borderWidth: 1,
+
+                  backgroundColor: (
+                     (Highcharts.theme && Highcharts.theme.legendBackgroundColor) ||
+                        '#EAE9EE'),
+                  shadow: true
+               };
+               var credits = {
+                  enabled: false
+               };
+               var series = [
+                  {
+                     name: 'Air Asia',
+                     data: [107, 31, 635, 203, 2]
+                  }
+               ];
+
+               var json = {};
+               json.chart = chart;
+               json.title = title;
+               json.subtitle = subtitle;
+               json.tooltip = tooltip;
+               json.xAxis = xAxis;
+               json.yAxis = yAxis;
+               json.series = series;
+               json.plotOptions = plotOptions;
+               json.legend = legend;
+               json.credits = credits;
+               $('#follower').highcharts(json);
+            });
+            </script>
+            </div>
+
+          </div>
 
        <div class="box1 effect3">
-         <h4>ENGAGEMENT RATE</h4>
+         <div id = "engagement" style = "width: 100%; height: 300px;">
+         <script>
+         $(document).ready(function() {
+            var chart = {
+               type: 'line'
+            };
+            var title = {
+               text: 'ENGAGEMENT RATE'
+            };
+            var subtitle = {
+               text: ''
+            };
+            var xAxis = {
+               categories: ['Januari', 'Febaruari', 'Maret', 'Maret', 'April'],
+               title: {
+                  text: null
+               }
+            };
+            var yAxis = {
+               min: 0,
+               title: {
+                  text: '',
+                  align: 'high'
+               },
+               labels: {
+                  overflow: 'justify'
+               }
+            };
+            var tooltip = {
+               valueSuffix: ' millions'
+            };
+            var plotOptions = {
+               bar: {
+                  dataLabels: {
+                     enabled: true
+                  }
+               }
+            };
+            var legend = {
+               layout: 'vertical',
+               align: 'right',
+               verticalAlign: 'top',
+               x: -40,
+               y: 100,
+               floating: true,
+               borderWidth: 1,
+
+               backgroundColor: (
+                  (Highcharts.theme && Highcharts.theme.legendBackgroundColor) ||
+                     '#EAE9EE'),
+               shadow: true
+            };
+            var credits = {
+               enabled: false
+            };
+            var series = [
+               {
+                  name: 'Air Asia',
+                  data: [107, 31, 635, 203, 2]
+               }
+            ];
+
+            var json = {};
+            json.chart = chart;
+            json.title = title;
+            json.subtitle = subtitle;
+            json.tooltip = tooltip;
+            json.xAxis = xAxis;
+            json.yAxis = yAxis;
+            json.series = series;
+            json.plotOptions = plotOptions;
+            json.legend = legend;
+            json.credits = credits;
+            $('#engagement').highcharts(json);
+         });
+         </script>
+         </div>
         </div>
 
-      <div class="box effect2">
-        <h4>5 TOP PEOPLE</h4>
-       </div>
+        <div class="box effect2">
+          <img src="/images/top-people.png" style="width:100%; height:100%;"/>
+         </div>
 
-       <div class="box effect2">
-         <h4>WORDCLOUD</h4>
-        </div>
+         <div class="box effect2">
+         <img src="/images/wordcloud.png" style="width:100%; height:100%;"/>
+          </div>
     </div>
   </section>
 
 
-  <section class="offer3" id="offer">
+  <section class="offer" id="offer">
     <div class="container text-center">
       <span>Want to analyze more secrets about your brands?</span><br><br>
       <img src="/images/message.png" height="40px" width="70px"/><br><br>

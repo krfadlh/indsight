@@ -239,10 +239,10 @@ section.features .product img{
     top:80px;
 }
 .box {
-    width:500px;
-    height:300px;
-    background:#EAE9EE;
-    margin:40px auto;
+  width:500px;
+  height:400px;
+  margin:30px auto;
+  display: inline-block;
 }
 .effect2
 {
@@ -280,12 +280,11 @@ section.features .product img{
   left: auto;
 }
 .box1 {
-    width:90%;
-    height:300px;
-    background:#EAE9EE;
-    margin:40px auto;
-    padding-left: 20px;
-    padding-right: : 20px;
+  width:90%;
+  height:300px;
+  margin:40px auto;
+  padding-left: 20px;
+  padding-right: : 20px;
 }
 .effect3
 {

@@ -292,9 +292,9 @@ section.chart {
 }
 .box {
     width:500px;
-    height:300px;
-    background:#EAE9EE;
-    margin:40px auto;
+    height:400px;
+    margin:30px auto;
+    display: inline-block;
 }
 .effect2
 {
@@ -339,7 +339,6 @@ section.chart {
 .box1 {
     width:95%;
     height:300px;
-    background:#EAE9EE;
     margin:40px auto;
     padding-left: 20px;
     padding-right: : 20px;
