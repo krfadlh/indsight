@@ -97,26 +97,23 @@ input[type=submit]:hover {
   <section class="features" id="features">
     <div class="container">
       <div class="row">
-        <div class="col-lg-3 branch">
-            <a href="{{action('CategoryController@index')}}" role="button" class="button">&#8249;Back to Brand</a>
+        <div class="col-lg-4 branch text-center">
+          <a href="{{action('CategoryController@index')}}" role="button" class="button">&#8249; Back to Brand</a>
         </div>
-        <div class="col-lg-6 text-center cat">
+        <div class="col-lg-4 text-center">
           <div class="feature-item centerBlock">
-            <img src="/images/sub-category.png"/>
-            <h5>AIR ASIA</h5>
-        </div>
-        </div>
-        <div class="col-lg-2 social">
-          <div class="btn-group">
-            <button type="button" class="btn btn-primary" autofocus="autofocus"><a href=""><i class="fa fa-facebook"></i></a></button>
-              <button type="button" class="btn btn-primary"><a href=""><i class="fa fa-twitter"></i></a></button>
-              <button type="button" class="btn btn-primary"><a href=""><i class="fa fa-youtube"></i></a></button>
-              <button type="button" class="btn btn-primary"><a href=""><i class="fa fa-instagram"></i></a></button>
+              <img src="/images/sub-category.png"/><h3>AIR ASIA</h3>
           </div>
         </div>
-        <div class="col-lg-1"></div>
+        <div class="col-lg-4 text-center">
+          <div class="btn-group">
+            <button type="button" class="btn btn-primary" autofocus="autofocus"><a href=""><i class="fa fa-facebook"></i></a></button>
+            <button type="button" class="btn btn-primary"><a href=""><i class="fa fa-twitter"></i></a></button>
+            <button type="button" class="btn btn-primary"><a href=""><i class="fa fa-youtube"></i></a></button>
+            <button type="button" class="btn btn-primary"><a href=""><i class="fa fa-instagram"></i></a></button>
+          </div>
+        </div>
       </div>
-    </div>
 
     <div class="row">
       <div class="box1 effect3">

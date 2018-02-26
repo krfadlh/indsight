@@ -97,7 +97,7 @@ input[type=submit]:hover {
   <section class="features" id="features">
     <div class="container">
       <div class="row">
-        <div class="col-lg-1 v-center">
+        <div class="col-xs-1 v-center">
           <label>Sort by:</label>
         </div>
         <div class="col-lg-4">
@@ -122,16 +122,14 @@ input[type=submit]:hover {
             </div>
           </form>
         </div>
-        <div class="col-lg-2">
+        <div class="col-lg-3 text-center">
           <div class="btn-group">
-
           <button type="button" class="btn btn-primary" autofocus="autofocus"><a href=""><i class="fa fa-facebook"></i></a></button>
             <button type="button" class="btn btn-primary"><a href=""><i class="fa fa-twitter"></i></a></button>
             <button type="button" class="btn btn-primary"><a href=""><i class="fa fa-youtube"></i></a></button>
             <button type="button" class="btn btn-primary"><a href=""><i class="fa fa-instagram"></i></a></button>
           </div>
         </div>
-        <div class="col-lg-1"></div>
       </div>
 
       <div class="row top-product">
